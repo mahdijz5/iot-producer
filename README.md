@@ -2,7 +2,7 @@
 
 ## **Related Projects**  
 
-- **[IoT Producer](https://github.com/mahdijz5/iot-processor)** – The consumer service that receive produced data.  
+- **[IoT Consumer](https://github.com/mahdijz5/iot-processor)** – The consumer service that receive produced data.  
 
 ## **Overview**
 
