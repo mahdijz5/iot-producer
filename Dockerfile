@@ -1,11 +1,11 @@
-FROM node:18-alpine as builder
+FROM node:20-alpine as builder
 WORKDIR /app
 COPY package*.json .
 RUN npm install
 COPY . .
 RUN npm run build 
 
-FROM node:18-alpine as prod
+FROM node:20-alpine as prod
 ENV NODE_ENV="prod"
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
