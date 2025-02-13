@@ -1,0 +1,17 @@
+services:
+  producer:
+    container_name: producer
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    networks:
+      - iot
+
+networks:
+  iot:
+    name: iot
+    driver: bridge
+    attachable: true
+    external: true
